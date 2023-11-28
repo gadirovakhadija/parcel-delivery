@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-user-roles-table" author="khadijagadirova">
+        <createTable tableName="user_roles">
+            <column name="user_id" type="BIGINT">
+<!--                <constraints references="users(id)"/>-->
+            </column>
+            <column name="role_id" type="BIGINT">
+<!--                <constraints references="roles(id)"/>-->
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="add-foreign-keys-to-user-roles" author="khadijagadirova">
+        <addForeignKeyConstraint baseTableName="user_roles" baseColumnNames="user_id"
+                                 referencedTableName="users" referencedColumnNames="id"
+                                 constraintName="fk_user_roles_user_id" onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="user_roles" baseColumnNames="role_id"
+                                 referencedTableName="roles" referencedColumnNames="id"
+                                 constraintName="fk_user_roles_role_id" onDelete="CASCADE"/>
+    </changeSet>
+</databaseChangeLog>
