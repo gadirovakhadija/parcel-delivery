@@ -12,7 +12,7 @@
             <column name="product" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="delivery-status" type="VARCHAR(50)">
+            <column name="delivery-status" type="VARCHAR(20)">
                 <constraints nullable="false"/>
             </column>
             <column name="destination" type="VARCHAR(50)">
@@ -21,7 +21,7 @@
             <column name="request-id" type="BIGINT">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="courier-name" type="TIMESTAMP">
+            <column name="courier-name" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
 

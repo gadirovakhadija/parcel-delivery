@@ -4,9 +4,9 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <include file="/db/1.0-user-table.xml"/>
-    <include file="/db/1.1-parcel-table.xml"/>
-    <include file="/db/1.2-role-table.xml"/>
-    <include file="/db/1.3-user-roles.xml"/>
+    <include file="db/1.0-user-table.xml"/>
+    <include file="db/1.1-parcel-table.xml"/>
+    <include file="db/1.2-role-table.xml"/>
+    <include file="db/1.3-user-roles.xml"/>
 
 </databaseChangeLog>
